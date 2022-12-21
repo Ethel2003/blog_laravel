@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Article;
 
 class ArticlesController extends Controller
 {
     public function index(){
-        $articles = [
-            ['title' => 'Titre article 1', 'body' => 'Contenu de l\'article 1'],
-            ['title' => 'Titre article 2', 'body' => 'Contenu de l\'article 2'],
-            ['title' => 'Titre article 3', 'body' => 'Contenu de l\'article 3'],
-        ];
 
+        $articles = Article::all();
         return view('layouts.articles', compact('articles'));
+    }
+
+    public function show($id){
+        $article = Article::with('user')->where('id', $id)->firstOrFail();
+        // return $article;
+        return view('articles.show', compact('article'));
     }
 }

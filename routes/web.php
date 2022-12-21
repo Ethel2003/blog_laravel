@@ -35,3 +35,5 @@ Route::get('/contact-us', [PagesController::class, 'contact']);
 Route::get('/about', [PagesController::class, 'about']);
 
 Route::get('/articles', [ArticlesController::class, 'index']);
+
+Route::get('/articles/{id}', [ArticlesController::class, 'show']);
