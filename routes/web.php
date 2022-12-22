@@ -36,4 +36,12 @@ Route::get('/about', [PagesController::class, 'about']);
 
 Route::get('/articles', [ArticlesController::class, 'index']);
 
-Route::get('/articles/{id}', [ArticlesController::class, 'show']);
+//route utilisée pour l'affichage lors de l'utilisation de l'id de l'article
+// Route::get('/articles/{id}', [ArticlesController::class, 'show']);
+
+// Route::get('/articles/{title}', [ArticlesController::class, 'show']);
+
+// Route::get('/articles/{article:title}', [ArticlesController::class, 'show']);
+
+//Retour à la cse dedépart
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);

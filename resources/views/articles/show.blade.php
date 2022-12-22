@@ -2,19 +2,22 @@
 
 @section('content')
 
-    <!-- @foreach($article->comments as $comment)
-        <p><strong>{{ $comment->user->name }}</strong> a réagi :</p>
-        <p>{{ $comment->comment }}</p>
-        <p><small>{{ $comment->created_at->diffForHumans() }}</small></p>
-    @endforeach -->
-
+    <!-- Approche avec les titres -->
         <article>
-            <a href="/articles/{{$article->id}}"><h3>Article {{$article['id']}}</h3></a>
+            <h3>Article {{$article['id']}}</h3>
             <p>Titre: {{$article->title}}</p>
-            <p>{{$article['body']}}</p>
             <img src="{{$article['image']}}" alt="img">
+            <p>{{$article['body']}}</p>
             <p>Auteur: {{$article->user->name}}</p>
-        </article>
+        </article>    
+        <div>
+            @foreach($article->comments as $comment)
+                <p><strong>{{ $comment->user->name }}</strong> a réagi :</p>
+                <p>{{ $comment->comment }}</p>
+                <p><small>{{ $comment->created_at->diffForHumans() }}</small></p>
+            @endforeach
+        </div>
+        
     
 @endsection
 

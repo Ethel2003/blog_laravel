@@ -13,6 +13,7 @@
             <a href="/articles/{{$article->id}}"><h3>Article {{$article['id']}}</h3></a>
             <p>Titre: {{$article['title']}}</p>
             <p>Auteur: {{$article->user->name}}</p>
+            <a href="/articles/{{$article->id}}">Voir plus</a>
         </article>
     @endforeach
     
@@ -20,7 +21,7 @@
     <!-- @@unless(!$articles)
         @@foreach($articles as $article)
             @@include('articles.index')
-        @@endforeach
+        @@endforeach<a href="/articles/{{$article->title}}">Voir plus</a>
     @@endunless -->
 
     <!-- Avec la directive @@each -->

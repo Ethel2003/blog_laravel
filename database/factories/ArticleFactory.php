@@ -27,7 +27,7 @@ class ArticleFactory extends Factory
     {
         return [
            'title' => $this->faker->text(15), //on veut 15 mots 
-           'body' =>  $this->faker->text(200), //on veut 50 phrases
+           'body' =>  $this->faker->text(1000), //on veut 50 phrases
            'user_id' => function(){
                 return User::inRandomOrder()->first()->id;
            },

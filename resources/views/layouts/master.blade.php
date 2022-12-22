@@ -20,17 +20,40 @@
             }
 
             img{
-                width:30%;
+                width:100%;
                 height: auto;
             }
+
+            article{
+                border:1px solid #ccc;
+                box-shadow: --lg: 0 0 10px rgba(0, 0, 0, 0.8) ;
+                max-width:400px;
+                margin:1rem 1rem;
+                padding:1rem;
+            }
+
+            header{
+                display:flex;
+                justify-content:space-around;
+                align-items: center;
+            }
+
+            /* header{
+                display:flex;
+                justify-content:space-around;
+            } */
         </style>
     </head>
     <body class="antialiased">
+            <header>
+                <h1>Laravel 101</h1>
+                    <nav>
+                        <a href="/contact-us">Contactez-nous</a>
+                        <a href="/about">About</a>
+                        <a href="/articles">Articles</a>
+                    </nav>
+            </header>
             
-            <h1>Laravel 101</h1>
-            <a href="/contact-us">Contactez-nous</a>
-            <a href="/about">About</a>
-            <a href="/articles">Articles</a>
             @yield('content')
     </body>
 </html>
