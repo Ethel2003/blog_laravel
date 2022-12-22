@@ -42,6 +42,24 @@
                 display:flex;
                 justify-content:space-around;
             } */
+
+            input{
+                border:1px solid #ccc;
+                width:60%;
+                padding:.5rem;
+                border-radius:3px;
+            }
+
+            form div{
+                margin:.5rem;
+            }
+
+            textarea{
+                border:1px solid #ccc;
+                width:60%;
+                border-radius:3px;
+            }
+
         </style>
     </head>
     <body class="antialiased">
@@ -51,6 +69,7 @@
                         <a href="/contact-us">Contactez-nous</a>
                         <a href="/about">About</a>
                         <a href="/articles">Articles</a>
+                        <a href="/create">Create article</a>
                     </nav>
             </header>
             

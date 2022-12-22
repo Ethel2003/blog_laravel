@@ -45,3 +45,15 @@ Route::get('/articles', [ArticlesController::class, 'index']);
 
 //Retour à la cse dedépart
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+
+//Route affichant le formulaire d'ajout d'article
+Route::get('/create',[ArticlesController::class, 'create']);
+
+//Route pour le formulaire
+Route::post('/articles/create', [ArticlesController::class, 'store']);
+
+//Route pour l'édition de l'article
+Route::get('/article/{article}/edit', [ArticlesController::class, 'edit']);
+
+//Route pour valider l'édition de l'article
+Route::patch('article/{article}/edit', [ArticlesController::class, 'update']);

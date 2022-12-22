@@ -9,6 +9,7 @@
             <img src="{{$article['image']}}" alt="img">
             <p>{{$article['body']}}</p>
             <p>Auteur: {{$article->user->name}}</p>
+            <a href="/article/{{$article->id}}/edit">Editer l'article</a>
         </article>    
         <div>
             @foreach($article->comments as $comment)

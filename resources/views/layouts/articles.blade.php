@@ -12,6 +12,8 @@
         <article>
             <a href="/articles/{{$article->id}}"><h3>Article {{$article['id']}}</h3></a>
             <p>Titre: {{$article['title']}}</p>
+            <img src="{{$article['image']}}" alt="img">
+            <p style="text-overflow:ellipsis; white-space:nowrap; overflow:hidden; width:300px;">{{$article['body']}}</p>
             <p>Auteur: {{$article->user->name}}</p>
             <a href="/articles/{{$article->id}}">Voir plus</a>
         </article>
