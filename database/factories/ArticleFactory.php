@@ -31,7 +31,7 @@ class ArticleFactory extends Factory
            'user_id' => function(){
                 return User::inRandomOrder()->first()->id;
            },
-           'image' => 'public\images\5836.jpg', 
+           'image' => '\images\5836.jpg', 
         ];
     }
 }

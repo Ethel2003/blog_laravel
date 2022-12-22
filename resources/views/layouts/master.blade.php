@@ -18,6 +18,11 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+
+            img{
+                width:30%;
+                height: auto;
+            }
         </style>
     </head>
     <body class="antialiased">
